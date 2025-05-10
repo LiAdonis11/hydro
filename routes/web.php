@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HydroponicsController;
 use App\Http\Controllers\SensorController;
 
+Route::get('/', function () {
+    return redirect('/hydro');
+});
+
 Route::prefix('hydro')->group(function () {
     // Route::get('/sensor-readings', [HydroponicsController::class, 'showSensorData']);
 

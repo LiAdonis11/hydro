@@ -10,10 +10,6 @@ Route::get('/test', function() {
     return response()->json(['message' => 'API is working']);
 });
 
-Route::get('/firebase-sensors', [HydroponicsController::class, 'getSensorReadings']);
 Route::apiResource('sensors', SensorController::class);
 
 Route::post('/sensor-data', [SensorController::class, 'store']);
-
-
-
